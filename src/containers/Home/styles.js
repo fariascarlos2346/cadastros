@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Background from './assets/logo03.png'
+import styled from "styled-components";
+import Background from "../../assets/logo03.png";
 
 export const Container = styled.div `
-   background: url("${Background}");
+   background-image: url("${Background}");
    background-size: cover;
 
    display: flex;
@@ -73,20 +73,27 @@ export const Input = styled.input`
 export const Button = styled.button`
    width: 342px;
    height: 74px;
+   margin-top: 130px;
+
    background: rgba(0, 0, 0, 0.8);
    border-radius: 15px;
    border: none;
+
    font-style: normal;
    font-weight: bold;
    font-size: 35px;
    line-height: 30px;
+
    color: #FFFFFF;
+   
    cursor: pointer;
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 20px;
-
+   Img{
+      width: 40px;
+   }
 
    &:hover{
       opacity: 0.8;
@@ -95,3 +102,4 @@ export const Button = styled.button`
       opacity: 0.5;
    }
 `;
+
