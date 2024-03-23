@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 
+import Avatar from "../../assets/avatar"
 import Logodev from "../../assets/logodev.png";
 import Arrow from "../../assets/arrow.jpeg";
 
@@ -21,9 +23,8 @@ function App() {
   const inputName = useRef()
   const inputAge = useRef()
 
-
   async function addNewUser(){
-    const { data: newUser } = await axios.post("http://localhost:3001/users", {
+    const { data: newUser } = await axios.post("http://localhost:3000/users", {
       name: inputName.current.value,
       age: inputAge.current.value,
    });
@@ -43,12 +44,9 @@ function App() {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade"/>
 
-       
-
         <Button onClick={addNewUser}>
-          Cadastrar<img alt="seta" src={Arrow}/>
+          <img alt="seta" src={Arrow}/> Voltar
         </Button>
-
       </ContainerItens>
     </Container>
   );

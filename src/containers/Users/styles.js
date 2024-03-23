@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-import Background from "../../assets/logo03.png";
+import Background from "../../assets/tec.png";
 
 export const Container = styled.div `
    background-image: url("${Background}");
@@ -46,40 +45,14 @@ export const H1 = styled.h1`
    margin-bottom: 80px;
 `;
 
-export const InputLabel = styled.p`
-      letter-spacing: -0.408px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      color: #eeaaee;
-      margin-left: 25px;
-`;
-
-export const Input = styled.input`
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 15px;
-      width: 342px;
-      height: 60px;
-      padding-left: 25px;
-      margin-bottom: 35px;
-      border: none;
-      outline: none;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 25px;
-      line-height: 30px;
-      color: #ffffff;
-`;
-
-export const Button = styled(Link)`
+export const Button = styled.button`
    width: 342px;
    height: 74px;
    margin-top: 130px;
 
-   background: rgba(0, 0, 0, 0.8);
+   background: transparent;
    border-radius: 15px;
-   border: none;
+   border: 1px solid #FFFFFF;
 
    font-style: normal;
    font-weight: bold;
@@ -89,12 +62,14 @@ export const Button = styled(Link)`
    color: #FFFFFF;
    
    cursor: pointer;
+
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 20px;
    Img{
       width: 40px;
+      transform: rotateY(180deg);
    }
 
    &:hover{
